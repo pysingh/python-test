@@ -1,6 +1,40 @@
 import owner
 import dog
 import cat
+import psycopg2
+
+conn = psycopg2.connect(database="bxd", user = "postgres", password = "root", host = "127.0.0.1", port = "5432")
+
+def creat_admin_table():
+	cur = conn.cursor()
+	cur.execute('''CREATE TABLE OWNER
+      (ID SERIAL PRIMARY KEY     NOT NULL,
+      first_name           CHAR(100)    NOT NULL,
+      last_name            CHAR(100)     NOT NULL,
+      birthday        DATE);''')
+	conn.commit()
+	conn.close()
+
+def creat_pets_table():
+	cur = conn.cursor()
+	cur.execute('''CREATE TABLE PETS
+      (ID SERIAL PRIMARY KEY     NOT NULL,
+      name           CHAR(100)    NOT NULL,
+      owner_id       INT  UNIQUE     NOT NULL,
+      type CHAR(50) NOT NULL,
+      birthday        DATE);''')
+	conn.commit()
+	conn.close()
+
+try:
+	creat_admin_table()
+except Exception as e:
+	pass
+
+try:
+	creat_pets_table()
+except Exception as e:
+	pass
 
 owner_list = []
 dog_list = []
