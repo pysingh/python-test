@@ -27,6 +27,8 @@ class Owner:
 		self.birthday = birthday
 	
 	def deleteOwner():
+		# delete owner here
+		#cur.execute("DELETE from OWNER where ID=owner_id;")
 		pass
 
 	def getOwnerCount():

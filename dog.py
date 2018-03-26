@@ -24,7 +24,9 @@ class Dog:
 		self.birthday = birthday
 		self.owner_id = owner
 	
-	def deleteOwner():
+	def deleteDog():
+		# delete dog here
+		#cur.execute("DELETE from PETS where ID=owner_id AND type='DOG';")
 		pass
 
 	def getDogCount():

@@ -25,6 +25,8 @@ class Cat:
 		self.owner_id = owner
 	
 	def deleteOwner():
+		# delete Cat here
+		#cur.execute("DELETE from PETS where ID=id and type='Cat';")
 		pass
 
 	def getCatCount():
