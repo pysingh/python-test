@@ -26,3 +26,6 @@ class Dog:
 	
 	def deleteOwner():
 		pass
+
+	def getDogCount():
+		return Dog.dog_count;

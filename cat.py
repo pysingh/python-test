@@ -26,3 +26,6 @@ class Cat:
 	
 	def deleteOwner():
 		pass
+
+	def getCatCount():
+		return Cat.cat_count;

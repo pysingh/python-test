@@ -29,3 +29,6 @@ class Owner:
 	
 	def deleteOwner():
 		pass
+
+	def getOwnerCount():
+		return Owner.owner_count;
