@@ -19,8 +19,7 @@ class Owner:
 		return Owner(first_name, last_name, birthday)
 
 	def readOwner(self):
-		print("Owner_details: \n\t first_name: %s, \n\t last_name: %s, \n\t birthday: %s" % (self.first_name, self.last_name
-			self.birthday));
+		print("Owner_details: \n\t first_name: %s, \n\t last_name: %s, \n\t birthday: %s" % (self.first_name, self.last_name, self.birthday));
 
 	def updateOwner(self, first_name, last_name, birthday):
 		self.first_name = first_name

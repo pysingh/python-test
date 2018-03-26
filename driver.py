@@ -1,6 +1,6 @@
-from Owner import * 
-from Dog import * 
-from Cat import *
+import owner
+import dog
+import cat
 
 owner_list = []
 dog_list = []
@@ -9,12 +9,12 @@ cat_list = []
 def main():
 	print "Select the correct category:\n 1. Owner\n 2. Dog \n 3. Cat "
 	category = int(raw_input())
-	if(category< 1 || category > 3):
+	if(category< 1 or category > 3):
 		exit()
 	if(category == 1):
 		print "\n\nSelct desired operation:\n 1. Create\n 2. Read\n 3. Update\n 4. Delete "
 		operation = int(raw_input())
-		if(operation<1 || operation>3):
+		if(operation<1 or operation>3):
 			exit()
 		if(operation == 1):
 			print "\nEnter first_name: "
@@ -64,7 +64,7 @@ def main():
 	elif category == 2:
 		print "\n\nSelct desired operation:\n 1. Create\n 2. Read\n 3. Update\n 4. Delete "
 		operation = int(raw_input())
-		if(operation<1 || operation>3):
+		if(operation<1 or operation>3):
 			exit()
 		if(operation == 1):
 			print "\nEnter name: "
@@ -110,7 +110,7 @@ def main():
 	else:
 		print "\n\nSelct desired operation:\n 1. Create\n 2. Read\n 3. Update\n 4. Delete "
 		operation = int(raw_input())
-		if(operation<1 || operation>3):
+		if(operation<1 or operation>3):
 			exit()
 		if(operation == 1):
 			print "\nEnter name: "
